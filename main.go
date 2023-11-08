@@ -43,6 +43,7 @@ func main() {
 	r.HandleFunc("/delete/{id}", DeleteMarker).Methods("GET")
 
 	fmt.Printf("Memulai server pada port 8080\n")
+	fmt.Printf("server dapat diakses pada http://localhost:8080 \n")
 
 	http.Handle("/", r)
 	err = http.ListenAndServe(":8080", nil)
